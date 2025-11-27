@@ -24,14 +24,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Chrome Extension
-        run: npm run build:chrome
+      - name: Build Extensions
+        run: node build.cjs
 
-      - name: Build Edge Extension
-        run: npm run build:edge
-
-      - name: Build Firefox Extension
-        run: npm run build:firefox
+      - name: Check zip files
+        run: npm run check:zip
 
       - name: Check changelog exists
         run: test -f CHANGELOG.md
@@ -44,5 +41,7 @@ jobs:
             ksd-wallet-edge.zip
             ksd-wallet-firefox.zip
           body_path: CHANGELOG.md
+          name: Release ${{ github.ref_name }}   # 👈 自动生成标题
+          tag_name: ${{ github.ref_name }}       # 👈 使用当前 tag
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

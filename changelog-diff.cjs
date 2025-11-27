@@ -1,5 +1,5 @@
-// changelog.cjs
-// 自动生成标准化的 CHANGELOG.md 条目
+// changelog-diff.cjs
+// 自动生成 CHANGELOG 条目，比较上一个 tag 和当前 tag 的 commit 差异
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -15,7 +15,19 @@ function main() {
     process.exit(1);
   }
 
-  const commits = run(`git log -10 --pretty=format:"%s"`).split('\n');
+  // 获取所有 tag，找到上一个 tag
+  const tags = run('git tag --sort=-creatordate').split('\n').filter(Boolean);
+  const currentIndex = tags.indexOf(version);
+  const prevTag = currentIndex >= 0 && currentIndex < tags.length - 1 ? tags[currentIndex + 1] : null;
+
+  let commits;
+  if (prevTag) {
+    commits = run(`git log ${prevTag}..${version} --pretty=format:"%s"`).split('\n');
+    console.log(`🔍 Comparing commits between ${prevTag} and ${version}`);
+  } else {
+    commits = run(`git log -10 --pretty=format:"%s"`).split('\n');
+    console.log(`⚠️ No previous tag found, using last 10 commits`);
+  }
 
   const sections = { Features: [], Fixes: [], Docs: [], Chore: [], Other: [] };
   commits.forEach(msg => {

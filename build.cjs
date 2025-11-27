@@ -1,5 +1,6 @@
 // build.cjs
-// 增强版构建脚本：一次性构建并生成 Chrome、Edge、Firefox 三个 zip 包
+// 最终闭合版：一次性构建并生成 Chrome、Edge、Firefox 三个 zip 包
+// 使用 npx 或直接调用 node_modules/.bin/vite，保证跨平台兼容
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -7,7 +8,7 @@ const path = require('path');
 
 function run(cmd) {
   console.log(`▶ ${cmd}`);
-  execSync(cmd, { stdio: 'inherit' });
+  execSync(cmd, { stdio: 'inherit', shell: true });
 }
 
 function zip(target) {
@@ -31,8 +32,14 @@ function main() {
     process.exit(1);
   }
 
-  // Step 1: 执行一次 vite build
-  run('vite build');
+  // Step 1: 执行 vite build，优先用 npx，失败时 fallback 到 node_modules/.bin/vite
+  try {
+    run('npx vite build');
+  } catch (err) {
+    const vitePath = path.resolve(__dirname, 'node_modules/.bin/vite');
+    console.log('⚠️ npx vite build failed, fallback to local vite path');
+    run(`"${vitePath}" build`);
+  }
 
   // Step 2: 根据参数或默认生成 zip
   if (argTarget) {
