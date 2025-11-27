@@ -1,7 +1,7 @@
 {
   "name": "ksd-wallet",
-  "version": "1.0.6",
-  "description": "KSD Wallet browser extension，支持账户管理、交易签名、资产索引和网络交互",
+  "version": "1.0.7",
+  "description": "KSD Wallet browser extension: supports account management, transaction signing, asset indexing, and network interaction",
   "author": "li",
   "license": "MIT",
   "type": "module",
@@ -28,8 +28,8 @@
     "zip:firefox": "cd dist && tar -czf ../ksd-wallet-firefox.zip .",
     "release": "npm run build:chrome && npm run build:edge && npm run build:firefox && npm run check:zip && npm run changelog && npm run git:commit",
     "version": "npm version patch",
-    "postversion": "echo '📦 Version bumped and ready for release'",
-    "postbuild": "echo '�?Build completed and manifest copied to dist/'",
+    "postversion": "echo 'Version bumped and ready for release'",
+    "postbuild": "echo 'Build completed and manifest copied to dist/'",
     "prepare": "npm run lint"
   },
   "dependencies": {
@@ -61,4 +61,3 @@
     "vite"
   ]
 }
-
