@@ -1,43 +1,26 @@
-const fs = require("fs");
-const path = require("path");
+// bump.cjs
+// 安全版本号升级脚本：只修改 package.json 和 package-lock.json，不做 git 操作
 
-// 读取并更新 JSON 文件版本号
-function bumpVersion(filePath) {
-  if (!fs.existsSync(filePath)) {
-    console.warn(`⚠️ 文件不存在: ${filePath}`);
-    return null;
-  }
+const fs = require('fs');
 
-  const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-  if (!data.version) {
-    console.warn(`⚠️ 文件缺少 version 字段: ${filePath}`);
-    return null;
-  }
-
-  const parts = data.version.split(".").map(Number);
-  parts[2] += 1; // patch 递增
-  const newVersion = parts.join(".");
-
-  data.version = newVersion;
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-  console.log(`✅ 已更新 ${filePath} → ${newVersion}`);
-
-  return newVersion;
+function bumpVersion(file, newVersion) {
+  const json = JSON.parse(fs.readFileSync(file, 'utf8'));
+  json.version = newVersion;
+  fs.writeFileSync(file, JSON.stringify(json, null, 2) + '\n');
+  console.log(`✅ Updated ${file} to version ${newVersion}`);
 }
 
-// 更新 package.json
-const pkgPath = path.join(process.cwd(), "package.json");
-const newVersion = bumpVersion(pkgPath);
+function main() {
+  const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+  const [major, minor, patch] = pkg.version.split('.').map(Number);
+  const newVersion = `${major}.${minor}.${patch + 1}`;
 
-// 更新 dist/manifest.json
-if (newVersion) {
-  const manifestPath = path.join(process.cwd(), "dist", "manifest.json");
-  if (fs.existsSync(manifestPath)) {
-    const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
-    manifest.version = newVersion;
-    fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-    console.log(`✅ 已同步 dist/manifest.json → ${newVersion}`);
-  } else {
-    console.warn("⚠️ dist/manifest.json 不存在，跳过同步");
+  bumpVersion('package.json', newVersion);
+  if (fs.existsSync('package-lock.json')) {
+    bumpVersion('package-lock.json', newVersion);
   }
+
+  console.log(`📦 Version bumped to ${newVersion}`);
 }
+
+main();
