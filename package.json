@@ -1,6 +1,6 @@
 {
   "name": "ksd-wallet",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "KSD Wallet browser extension: supports account management, transaction signing, asset indexing, and network interaction",
   "author": "li",
   "license": "MIT",
@@ -61,3 +61,4 @@
     "vite"
   ]
 }
+
