@@ -1,0 +1,146 @@
+[
+  {
+    "name": "Bitcoin",
+    "chainId": "btc-mainnet",
+    "rpc": "https://btc.node.example",
+    "icon": "btc.png",
+    "enabled": true,
+    "type": "L1"
+  },
+  {
+    "name": "Bitcoin Cash",
+    "chainId": "bch-mainnet",
+    "rpc": "https://bch.node.example",
+    "icon": "bch.png",
+    "enabled": true,
+    "type": "L1"
+  },
+  {
+    "name": "Litecoin",
+    "chainId": "ltc-mainnet",
+    "rpc": "https://ltc.node.example",
+    "icon": "ltc.png",
+    "enabled": true,
+    "type": "L1"
+  },
+  {
+    "name": "Dogecoin",
+    "chainId": "doge-mainnet",
+    "rpc": "https://doge.node.example",
+    "icon": "doge.png",
+    "enabled": true,
+    "type": "L1"
+  },
+  {
+    "name": "Ethereum",
+    "chainId": 1,
+    "rpc": "https://mainnet.infura.io/v3/YOUR_KEY",
+    "icon": "eth.png",
+    "enabled": true,
+    "type": "L1"
+  },
+  {
+    "name": "Solana",
+    "chainId": "solana-mainnet",
+    "rpc": "https://api.mainnet-beta.solana.com",
+    "icon": "sol.png",
+    "enabled": true,
+    "type": "L1"
+  },
+  {
+    "name": "TRON",
+    "chainId": "tron-mainnet",
+    "rpc": "https://api.trongrid.io",
+    "icon": "tron.png",
+    "enabled": true,
+    "type": "L1"
+  },
+  {
+    "name": "BNB Chain",
+    "chainId": 56,
+    "rpc": "",
+    "icon": "bnb.png",
+    "enabled": true,
+    "type": "L1"
+  },
+  {
+    "name": "Avalanche C-Chain",
+    "chainId": 43114,
+    "rpc": "https://api.avax.network/ext/bc/C/rpc",
+    "icon": "avax.png",
+    "enabled": true,
+    "type": "L1"
+  },
+  {
+    "name": "Fantom Opera",
+    "chainId": 250,
+    "rpc": "https://rpc.ftm.tools",
+    "icon": "ftm.png",
+    "enabled": true,
+    "type": "L1"
+  },
+  {
+    "name": "Near Protocol",
+    "chainId": "near-mainnet",
+    "rpc": "https://rpc.mainnet.near.org",
+    "icon": "near.png",
+    "enabled": true,
+    "type": "L1"
+  },
+  {
+    "name": "Aptos",
+    "chainId": "aptos-mainnet",
+    "rpc": "https://fullnode.mainnet.aptoslabs.com/v1",
+    "icon": "apt.png",
+    "enabled": true,
+    "type": "L1"
+  },
+  {
+    "name": "Sui",
+    "chainId": "sui-mainnet",
+    "rpc": "https://fullnode.mainnet.sui.io",
+    "icon": "sui.png",
+    "enabled": true,
+    "type": "L1"
+  },
+  {
+    "name": "Cosmos Hub",
+    "chainId": "cosmos-mainnet",
+    "rpc": "https://cosmos.node.example",
+    "icon": "atom.png",
+    "enabled": true,
+    "type": "L1"
+  },
+  {
+    "name": "Polkadot",
+    "chainId": "polkadot-mainnet",
+    "rpc": "https://polkadot.node.example",
+    "icon": "dot.png",
+    "enabled": true,
+    "type": "L1"
+  },
+  {
+    "name": "Cardano",
+    "chainId": "cardano-mainnet",
+    "rpc": "https://cardano.node.example",
+    "icon": "ada.png",
+    "enabled": true,
+    "type": "L1"
+  },
+  {
+    "name": "Algorand",
+    "chainId": "algorand-mainnet",
+    "rpc": "https://algorand.node.example",
+    "icon": "algo.png",
+    "enabled": true,
+    "type": "L1"
+  },
+  {
+    "name": "Tezos",
+    "chainId": "tezos-mainnet",
+    "rpc": "https://mainnet.api.tez.ie",
+    "icon": "xtz.png",
+    "enabled": true,
+    "type": "L1"
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "app": {
+    "name": "KSD Wallet",
+    "version": "1.0.0",
+    "defaultNetwork": "Ethereum Mainnet",
+    "language": "zh-CN",
+    "supportedLanguages": ["zh-CN", "en-US"],
+    "theme": "dark",
+    "themes": ["light", "dark"],
+    "autoLockMinutes": 15,
+    "environment": "production"
+  },
+  "security": {
+    "encryption": "AES-256-GCM",
+    "keyDerivation": "PBKDF2",
+    "lockOnStartup": true,
+    "allowCustomRPC": true,
+    "hardwareWalletSupport": true,
+    "minPasswordLength": 12
+  },
+  "logging": {
+    "level": "info",
+    "saveToFile": true,
+    "logDir": "./logs",
+    "debugRPC": false,
+    "maxFileSizeMB": 10,
+    "rotateFiles": true,
+    "separateLevels": true
+  },
+  "ui": {
+    "popupWidth": 400,
+    "popupHeight": 600,
+    "sidebarEnabled": true,
+    "resizable": true,
+    "animationsEnabled": true
+  },
+  "assets": {
+    "priceSources": ["coingecko", "coinmarketcap"],
+    "refreshIntervalSeconds": 60,
+    "tokenMapFile": "./config/token-map.json",
+    "cacheEnabled": true
+  },
+  "build": {
+    "bundler": "vite",
+    "entry": "./main.js",
+    "distDir": "./dist",
+    "sourceMap": true,
+    "minify": true
+  }
+}

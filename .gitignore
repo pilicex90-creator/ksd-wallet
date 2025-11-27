@@ -1,0 +1,23 @@
+# Node.js 依赖
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 构建产物
+dist/
+*.zip
+
+# 浏览器扩展打包产物
+ksd-wallet-chrome.zip
+ksd-wallet-edge.zip
+ksd-wallet-firefox.zip
+
+# IDE / 编辑器配置
+.vscode/
+.idea/
+*.swp
+
+# 系统文件
+.DS_Store
+Thumbs.db

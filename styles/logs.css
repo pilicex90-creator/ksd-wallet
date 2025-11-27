@@ -1,0 +1,235 @@
+/* ============================= */
+/* 日志模块总体布局               */
+/* ============================= */
+.logs-ui {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.logs-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 16px;
+}
+
+.logs-card h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* ============================= */
+/* 操作区                         */
+/* ============================= */
+.logs-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.logs-actions button {
+  min-width: 100px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #0078d7;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.logs-actions button:hover {
+  background-color: #005fa3;
+}
+
+.logs-actions button:active {
+  background-color: #004a80;
+}
+
+.logs-actions button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* ============================= */
+/* 列表样式                       */
+/* ============================= */
+.logs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 360px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+/* 自定义滚动条 */
+.logs-list::-webkit-scrollbar {
+  width: 8px;
+}
+.logs-list::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 4px;
+}
+.logs-list::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+}
+
+.logs-list li {
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  line-height: 1.5;
+  word-break: break-word;
+  transition: background-color 0.2s ease;
+}
+
+.logs-list li:hover {
+  background-color: #f5f5f5;
+}
+
+.logs-list li:last-child {
+  border-bottom: none;
+}
+
+/* ============================= */
+/* 日志类型颜色                   */
+/* ============================= */
+.log-normal {
+  color: #333;
+}
+
+.log-bridge {
+  color: #0078d7;
+  font-weight: 600;
+}
+
+.log-system {
+  color: #888;
+  font-style: italic;
+}
+
+.log-debug {
+  color: #9c27b0; /* 紫色：调试日志 */
+}
+
+/* ============================= */
+/* 状态提示条                     */
+/* ============================= */
+.logs-status {
+  font-size: 13px;
+  margin-top: 10px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+}
+
+.logs-status.loading {
+  color: #ff9800;
+  border-color: #ff9800;
+  background-color: #fff3e0;
+}
+
+.logs-status.success {
+  color: #4caf50;
+  border-color: #4caf50;
+  background-color: #e8f5e9;
+}
+
+.logs-status.error {
+  color: #f44336;
+  border-color: #f44336;
+  background-color: #ffebee;
+}
+
+/* ============================= */
+/* 暗色模式支持                   */
+/* ============================= */
+@media (prefers-color-scheme: dark) {
+  .logs-card {
+    background-color: #2a2a2a;
+    color: #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  }
+
+  .logs-card h3 {
+    color: #ddd;
+  }
+
+  .logs-list {
+    border-color: #444;
+  }
+
+  .logs-list li {
+    border-bottom-color: #444;
+    color: #ddd;
+  }
+
+  .logs-list li:hover {
+    background-color: #333;
+  }
+
+  .log-normal {
+    color: #ddd;
+  }
+
+  .log-bridge {
+    color: #66b0ff;
+  }
+
+  .log-system {
+    color: #aaa;
+  }
+
+  .log-debug {
+    color: #ba68c8;
+  }
+
+  .logs-status {
+    color: #aaa;
+  }
+
+  .logs-status.loading {
+    color: #ffc107;
+    background-color: #3a2a00;
+    border-color: #ffc107;
+  }
+
+  .logs-status.success {
+    color: #81c784;
+    background-color: #1b3d1b;
+    border-color: #81c784;
+  }
+
+  .logs-status.error {
+    color: #e57373;
+    background-color: #3d1b1b;
+    border-color: #e57373;
+  }
+
+  .logs-actions button {
+    background-color: #66b0ff;
+    color: #fff;
+  }
+
+  .logs-actions button:hover {
+    background-color: #3388cc;
+  }
+}
+
+/* ============================= */
+/* 响应式优化                     */
+/* ============================= */
+@media (max-width: 768px) {
+  .logs-list {
+    max-height: 280px;
+  }
+  .logs-list li {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "name": "ksd-wallet",
+  "version": "1.0.2",
+  "description": "KSD Wallet browser extension，支持账户管理、交易签名、资产索引和网络交互",
+  "author": "li",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "serve": "vite preview",
+    "watch": "vite build --watch",
+    "clean": "rimraf dist .vite",
+    "lint": "eslint . --ext .js,.vue",
+    "format": "prettier --write .",
+    "check": "npm run lint && npm run format --check",
+    "prebuild": "npm run clean && npm run check",
+    "build:chrome": "vite build && node build.cjs chrome && npm run bump && npm run check:manifest && npm run zip:chrome && npm run changelog && npm run git:commit",
+    "build:edge": "vite build && node build.cjs edge && npm run bump && npm run check:manifest && npm run zip:edge && npm run changelog && npm run git:commit",
+    "build:firefox": "vite build && node build.cjs firefox && npm run bump && npm run check:manifest && npm run zip:firefox && npm run changelog && npm run git:commit",
+    "build": "npm run build:chrome",
+    "bump": "node bump.cjs",
+    "check:manifest": "node check-manifest.cjs",
+    "check:zip": "node check-zip.cjs",
+    "changelog": "node changelog.cjs",
+    "git:commit": "node git-commit.cjs",
+    "zip:chrome": "cd dist && tar -czf ../ksd-wallet-chrome.zip .",
+    "zip:edge": "cd dist && tar -czf ../ksd-wallet-edge.zip .",
+    "zip:firefox": "cd dist && tar -czf ../ksd-wallet-firefox.zip .",
+    "release": "npm run build:chrome && npm run build:edge && npm run build:firefox && npm run check:zip && npm run changelog && npm run git:commit",
+    "version": "npm version patch",
+    "postversion": "echo '📦 Version bumped and ready for release'",
+    "postbuild": "echo '✅ Build completed and manifest copied to dist/'",
+    "prepare": "npm run lint"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "ethers": "^6.15.0",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.0",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.0",
+    "autoprefixer": "^10.4.22",
+    "eslint": "^9.39.1",
+    "postcss": "^8.5.6",
+    "prettier": "^3.1.0",
+    "rimraf": "^5.0.0",
+    "vite": "^5.4.21",
+    "vite-plugin-eslint": "^1.8.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "keywords": [
+    "wallet",
+    "browser-extension",
+    "ethereum",
+    "vue",
+    "vite"
+  ]
+}

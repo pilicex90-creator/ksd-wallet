@@ -1,0 +1,126 @@
+/* ============================= */
+/* 交易界面模块 (兑换 / 跨链桥)   */
+/* ============================= */
+.tx-ui {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tx-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 16px;
+}
+
+.tx-card h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* ============================= */
+/* 表单布局                       */
+/* ============================= */
+.tx-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tx-form label {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.tx-form input[type="text"],
+.tx-form input[type="number"],
+.tx-form select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tx-form input:focus,
+.tx-form select:focus {
+  border-color: #0078d7;
+  outline: none;
+}
+
+/* ============================= */
+/* 按钮区                         */
+/* ============================= */
+.tx-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tx-actions button {
+  min-width: 100px;
+}
+
+/* ============================= */
+/* 状态提示                       */
+/* ============================= */
+.tx-status {
+  font-size: 13px;
+  margin-top: 10px;
+  color: #666;
+}
+
+.tx-status.loading {
+  color: #ff9800; /* 橙色：加载中 */
+}
+
+.tx-status.success {
+  color: #4caf50; /* 绿色：成功 */
+}
+
+.tx-status.error {
+  color: #f44336; /* 红色：失败 */
+}
+
+/* ============================= */
+/* 暗色模式支持                   */
+/* ============================= */
+@media (prefers-color-scheme: dark) {
+  .tx-card {
+    background-color: #2a2a2a;
+    color: #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  }
+
+  .tx-form label {
+    color: #bbb;
+  }
+
+  .tx-form input[type="text"],
+  .tx-form input[type="number"],
+  .tx-form select {
+    background-color: #333;
+    color: #ddd;
+    border: 1px solid #555;
+  }
+
+  .tx-status {
+    color: #aaa;
+  }
+
+  .tx-status.loading {
+    color: #ffc107;
+  }
+
+  .tx-status.success {
+    color: #81c784;
+  }
+
+  .tx-status.error {
+    color: #e57373;
+  }
+}

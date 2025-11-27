@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Ethereum Sepolia",
+    "chainId": 11155111,
+    "rpc": "https://sepolia.infura.io/v3/YOUR_KEY",
+    "icon": "eth.png",
+    "enabled": true,
+    "type": "Testnet"
+  },
+  {
+    "name": "Ethereum Goerli",
+    "chainId": 5,
+    "rpc": "https://goerli.infura.io/v3/YOUR_KEY",
+    "icon": "eth.png",
+    "enabled": true,
+    "type": "Testnet"
+  },
+  {
+    "name": "Polygon Mumbai",
+    "chainId": 80001,
+    "rpc": "https://rpc-mumbai.maticvigil.com",
+    "icon": "polygon.png",
+    "enabled": true,
+    "type": "Testnet"
+  },
+  {
+    "name": "Solana Devnet",
+    "chainId": "solana-devnet",
+    "rpc": "https://api.devnet.solana.com",
+    "icon": "sol.png",
+    "enabled": true,
+    "type": "Testnet"
+  },
+  {
+    "name": "Solana Testnet",
+    "chainId": "solana-testnet",
+    "rpc": "https://api.testnet.solana.com",
+    "icon": "sol.png",
+    "enabled": true,
+    "type": "Testnet"
+  },
+  {
+    "name": "TRON Shasta",
+    "chainId": "tron-shasta",
+    "rpc": "https://api.shasta.trongrid.io",
+    "icon": "tron.png",
+    "enabled": true,
+    "type": "Testnet"
+  },
+  {
+    "name": "Arbitrum Sepolia",
+    "chainId": 421614,
+    "rpc": "https://sepolia-rollup.arbitrum.io/rpc",
+    "icon": "arb.png",
+    "enabled": true,
+    "type": "Testnet"
+  },
+  {
+    "name": "Optimism Goerli",
+    "chainId": 420,
+    "rpc": "https://goerli.optimism.io",
+    "icon": "op.png",
+    "enabled": true,
+    "type": "Testnet"
+  },
+  {
+    "name": "Avalanche Fuji",
+    "chainId": 43113,
+    "rpc": "https://api.avax-test.network/ext/bc/C/rpc",
+    "icon": "avax.png",
+    "enabled": true,
+    "type": "Testnet"
+  },
+  {
+    "name": "Fantom Testnet",
+    "chainId": 4002,
+    "rpc": "https://rpc.testnet.fantom.network",
+    "icon": "ftm.png",
+    "enabled": true,
+    "type": "Testnet"
+  },
+  {
+    "name": "Aptos Testnet",
+    "chainId": "aptos-testnet",
+    "rpc": "https://fullnode.testnet.aptoslabs.com/v1",
+    "icon": "apt.png",
+    "enabled": true,
+    "type": "Testnet"
+  },
+  {
+    "name": "Sui Testnet",
+    "chainId": "sui-testnet",
+    "rpc": "https://fullnode.testnet.sui.io",
+    "icon": "sui.png",
+    "enabled": true,
+    "type": "Testnet"
+  }
+]

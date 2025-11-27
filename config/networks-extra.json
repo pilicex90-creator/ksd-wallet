@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Axelar Mainnet",
+    "chainId": "axelar-mainnet",
+    "rpc": "https://axelar.node.example",
+    "icon": "axelar.png",
+    "enabled": true,
+    "type": "Crosschain"
+  },
+  {
+    "name": "Aurora Mainnet",
+    "chainId": 1313161554,
+    "rpc": "https://mainnet.aurora.dev",
+    "icon": "aurora.png",
+    "enabled": true,
+    "type": "EVM-Compatible"
+  },
+  {
+    "name": "ApeChain Mainnet",
+    "chainId": "apechain-mainnet",
+    "rpc": "https://apechain.node.example",
+    "icon": "ape.png",
+    "enabled": true,
+    "type": "Special"
+  },
+  {
+    "name": "Abstract Mainnet",
+    "chainId": "abstract-mainnet",
+    "rpc": "https://abstract.node.example",
+    "icon": "abstract.png",
+    "enabled": true,
+    "type": "Special"
+  },
+  {
+    "name": "X Layer Mainnet",
+    "chainId": "xlayer-mainnet",
+    "rpc": "https://xlayer.node.example",
+    "icon": "xlayer.png",
+    "enabled": true,
+    "type": "Special"
+  },
+  {
+    "name": "Harmony Mainnet",
+    "chainId": 1666600000,
+    "rpc": "https://api.harmony.one",
+    "icon": "harmony.png",
+    "enabled": true,
+    "type": "L1"
+  },
+  {
+    "name": "Celo Mainnet",
+    "chainId": 42220,
+    "rpc": "https://forno.celo.org",
+    "icon": "celo.png",
+    "enabled": true,
+    "type": "L1"
+  },
+  {
+    "name": "Kava Mainnet",
+    "chainId": 2222,
+    "rpc": "https://evm.kava.io",
+    "icon": "kava.png",
+    "enabled": true,
+    "type": "L1"
+  }
+]

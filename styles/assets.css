@@ -1,0 +1,78 @@
+/* ============================= */
+/* 资产快照模块                   */
+/* ============================= */
+.asset-ui {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.asset-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 16px;
+}
+
+.asset-summary p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.asset-summary span {
+  font-weight: bold;
+  color: #0078d7;
+}
+
+/* ============================= */
+/* 状态提示                       */
+/* ============================= */
+.asset-status {
+  font-size: 13px;
+  color: #666;
+  margin-left: 10px;
+}
+
+.asset-status.loading {
+  color: #ff9800;
+}
+
+.asset-status.success {
+  color: #4caf50;
+}
+
+.asset-status.error {
+  color: #f44336;
+}
+
+/* ============================= */
+/* 暗色模式支持                   */
+/* ============================= */
+@media (prefers-color-scheme: dark) {
+  .asset-card {
+    background-color: #2a2a2a;
+    color: #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  }
+
+  .asset-summary span {
+    color: #66b0ff;
+  }
+
+  .asset-status {
+    color: #aaa;
+  }
+
+  .asset-status.loading {
+    color: #ffc107;
+  }
+
+  .asset-status.success {
+    color: #81c784;
+  }
+
+  .asset-status.error {
+    color: #e57373;
+  }
+}

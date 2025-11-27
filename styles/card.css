@@ -1,0 +1,90 @@
+/* ============================= */
+/* 通用卡片样式                   */
+/* ============================= */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+/* 标题样式 */
+.card h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* 内容段落 */
+.card p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+/* 高亮文字 */
+.card span {
+  font-weight: bold;
+  color: #0078d7;
+}
+
+/* ============================= */
+/* 状态提示统一样式               */
+/* ============================= */
+.card-status {
+  font-size: 13px;
+  margin-top: 10px;
+  color: #666;
+}
+
+.card-status.loading {
+  color: #ff9800;
+}
+
+.card-status.success {
+  color: #4caf50;
+}
+
+.card-status.error {
+  color: #f44336;
+}
+
+/* ============================= */
+/* 暗色模式支持                   */
+/* ============================= */
+@media (prefers-color-scheme: dark) {
+  .card {
+    background-color: #2a2a2a;
+    color: #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  }
+
+  .card h3 {
+    color: #ddd;
+  }
+
+  .card p {
+    color: #ccc;
+  }
+
+  .card span {
+    color: #66b0ff;
+  }
+
+  .card-status {
+    color: #aaa;
+  }
+
+  .card-status.loading {
+    color: #ffc107;
+  }
+
+  .card-status.success {
+    color: #81c784;
+  }
+
+  .card-status.error {
+    color: #e57373;
+  }
+}

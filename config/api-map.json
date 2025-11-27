@@ -1,0 +1,118 @@
+{
+  "1": {
+    "name": "Ethereum Mainnet",
+    "baseURL": "https://api.etherscan.io/api",
+    "available": true
+  },
+  "11155111": {
+    "name": "Sepolia Testnet",
+    "baseURL": "https://api-sepolia.etherscan.io/api",
+    "available": true
+  },
+  "17000": {
+    "name": "Holesky Testnet",
+    "baseURL": "https://api-holesky.etherscan.io/api",
+    "available": true
+  },
+  "42161": {
+    "name": "Arbitrum One Mainnet",
+    "baseURL": "https://api.arbiscan.io/api",
+    "available": true
+  },
+  "42170": {
+    "name": "Arbitrum Nova Mainnet",
+    "baseURL": "https://api-nova.arbiscan.io/api",
+    "available": true
+  },
+  "421614": {
+    "name": "Arbitrum Sepolia Testnet",
+    "baseURL": "https://api-sepolia.arbiscan.io/api",
+    "available": true
+  },
+  "137": {
+    "name": "Polygon Mainnet",
+    "baseURL": "https://api.polygonscan.com/api",
+    "available": true
+  },
+  "80002": {
+    "name": "Polygon Amoy Testnet",
+    "baseURL": "https://api-amoy.polygonscan.com/api",
+    "available": true
+  },
+  "324": {
+    "name": "zkSync Mainnet",
+    "baseURL": "https://api.zksync.io/api",
+    "available": true
+  },
+  "300": {
+    "name": "zkSync Sepolia Testnet",
+    "baseURL": "https://api-sepolia.zksync.io/api",
+    "available": true
+  },
+  "59144": {
+    "name": "Linea Mainnet",
+    "baseURL": "https://api.lineascan.build/api",
+    "available": true
+  },
+  "59141": {
+    "name": "Linea Sepolia Testnet",
+    "baseURL": "https://api-sepolia.lineascan.build/api",
+    "available": true
+  },
+  "534352": {
+    "name": "Scroll Mainnet",
+    "baseURL": "https://api.scrollscan.com/api",
+    "available": true
+  },
+  "534351": {
+    "name": "Scroll Sepolia Testnet",
+    "baseURL": "https://api-sepolia.scrollscan.com/api",
+    "available": true
+  },
+  "8453": {
+    "name": "Base Mainnet",
+    "baseURL": "https://api.basescan.org/api",
+    "available": false
+  },
+  "84532": {
+    "name": "Base Sepolia Testnet",
+    "baseURL": "https://api-sepolia.basescan.org/api",
+    "available": false
+  },
+  "56": {
+    "name": "BNB Smart Chain Mainnet",
+    "baseURL": "https://api.bscscan.com/api",
+    "available": false
+  },
+  "97": {
+    "name": "BNB Smart Chain Testnet",
+    "baseURL": "https://api-testnet.bscscan.com/api",
+    "available": false
+  },
+  "43114": {
+    "name": "Avalanche C-Chain",
+    "baseURL": "https://api.snowtrace.io/api",
+    "available": false
+  },
+  "43113": {
+    "name": "Avalanche Fuji Testnet",
+    "baseURL": "https://api-testnet.snowtrace.io/api",
+    "available": false
+  },
+  "10": {
+    "name": "Optimism Mainnet",
+    "baseURL": "https://api-optimistic.etherscan.io/api",
+    "available": false
+  },
+  "11155420": {
+    "name": "Optimism Sepolia Testnet",
+    "baseURL": "https://api-sepolia-optimistic.etherscan.io/api",
+    "available": false
+  },
+  "solana": {
+    "name": "Solana Mainnet",
+    "baseURL": "https://public-api.solscan.io",
+    "available": true,
+    "note": "Use Solscan API instead of Etherscan"
+  }
+}

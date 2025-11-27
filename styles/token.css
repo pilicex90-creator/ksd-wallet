@@ -1,0 +1,134 @@
+/* ============================= */
+/* 代币列表模块                   */
+/* ============================= */
+.token-ui {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.token-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 16px;
+}
+
+.token-card h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* ============================= */
+/* 代币表格样式                   */
+/* ============================= */
+.token-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.token-table th,
+.token-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.token-table th {
+  background-color: #f0f2f5;
+  font-weight: bold;
+  color: #222;
+}
+
+.token-row:hover {
+  background-color: #fafafa;
+}
+
+/* ============================= */
+/* 代币价格与收益显示             */
+/* ============================= */
+.token-price {
+  color: #0078d7;
+  font-weight: bold;
+}
+
+.token-apy {
+  font-size: 13px;
+  color: #4caf50;
+}
+
+.token-chain {
+  font-size: 12px;
+  color: #888;
+}
+
+/* ============================= */
+/* 状态提示                       */
+/* ============================= */
+.token-status {
+  font-size: 13px;
+  color: #666;
+  margin-top: 8px;
+}
+
+.token-status.loading {
+  color: #ff9800;
+}
+
+.token-status.success {
+  color: #4caf50;
+}
+
+.token-status.error {
+  color: #f44336;
+}
+
+/* ============================= */
+/* 暗色模式支持                   */
+/* ============================= */
+@media (prefers-color-scheme: dark) {
+  .token-card {
+    background-color: #2a2a2a;
+    color: #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  }
+
+  .token-table th {
+    background-color: #333;
+    color: #ddd;
+  }
+
+  .token-row:hover {
+    background-color: #3a3a3a;
+  }
+
+  .token-price {
+    color: #66b0ff;
+  }
+
+  .token-apy {
+    color: #81c784;
+  }
+
+  .token-chain {
+    color: #aaa;
+  }
+
+  .token-status {
+    color: #aaa;
+  }
+
+  .token-status.loading {
+    color: #ffc107;
+  }
+
+  .token-status.success {
+    color: #81c784;
+  }
+
+  .token-status.error {
+    color: #e57373;
+  }
+}
