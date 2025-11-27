@@ -1,0 +1,56 @@
+/* ============================= */
+/* 导航条基础样式                 */
+/* ============================= */
+.wallet-nav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.wallet-nav button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.wallet-nav button:hover {
+  background-color: #e0e0e0;
+}
+
+/* ============================= */
+/* active 状态样式                */
+/* ============================= */
+.wallet-nav button.active {
+  background-color: #0078d7;
+  color: #fff;
+}
+
+/* ============================= */
+/* section 显示/隐藏逻辑           */
+/* ============================= */
+.wallet-container section {
+  display: none;   /* 默认隐藏 */
+}
+
+.wallet-container section.active {
+  display: block;  /* 只有 active 的 section 显示 */
+}
+
+/* ============================= */
+/* 暗色模式支持                   */
+/* ============================= */
+@media (prefers-color-scheme: dark) {
+  .wallet-nav button {
+    background-color: #333;
+    color: #ddd;
+  }
+
+  .wallet-nav button.active {
+    background-color: #66b0ff;
+    color: #fff;
+  }
+}

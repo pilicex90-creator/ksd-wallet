@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>KSD Wallet Sidebar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="KSD Wallet - 侧边栏界面" />
+  <meta name="theme-color" content="#1a1a1a" />
+
+  <!-- 全局基础样式 -->
+  <link rel="stylesheet" href="./styles/base.css" />
+  <link rel="stylesheet" href="./styles/nav.css" />
+  <link rel="stylesheet" href="./styles/card.css" />
+
+  <!-- 模块样式 -->
+  <link rel="stylesheet" href="./styles/wallet.css" />
+  <link rel="stylesheet" href="./styles/assets.css" />
+  <link rel="stylesheet" href="./styles/token.css" />
+  <link rel="stylesheet" href="./styles/tx.css" />
+  <link rel="stylesheet" href="./styles/settings.css" />
+  <link rel="stylesheet" href="./styles/logs.css" />
+
+  <!-- UI 定制样式 -->
+  <link rel="stylesheet" href="./ui/wallet-ui.css" />
+
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: #1a1a1a;
+      color: #fff;
+      font-family: sans-serif;
+    }
+    #app {
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- 根容器，所有 UI 由 mount.js 动态生成 -->
+  <div id="app"></div>
+
+  <!-- 无 JS 提示 -->
+  <noscript>请启用 JavaScript 以使用 KSD Wallet。</noscript>
+
+  <!-- 打包后的入口脚本，包含 ethers 和所有依赖 -->
+  <script type="module" src="./js/wallet.bundle.js"></script>
+</body>
+</html>

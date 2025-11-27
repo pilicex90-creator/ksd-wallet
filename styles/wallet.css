@@ -1,0 +1,214 @@
+/* ============================= */
+/* 钱包总览模块样式               */
+/* ============================= */
+#wallet-ui {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wallet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wallet-header h2 {
+  font-size: 20px;
+  margin: 0;
+  color: #222;
+}
+
+.wallet-status {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ============================= */
+/* 余额展示                       */
+/* ============================= */
+.wallet-balance {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f2f5;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.wallet-balance .label {
+  font-size: 13px;
+  color: #888;
+}
+
+.wallet-balance .value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0078d7;
+}
+
+/* ============================= */
+/* 操作按钮区                     */
+/* ============================= */
+.wallet-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.wallet-actions button {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #0078d7;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.wallet-actions button:hover {
+  background-color: #005fa3;
+}
+
+.wallet-actions button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* ============================= */
+/* 钱包信息卡片                   */
+/* ============================= */
+.wallet-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 16px;
+}
+
+.wallet-card h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.wallet-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* ============================= */
+/* 钱包地址展示                   */
+/* ============================= */
+.wallet-address {
+  font-family: monospace;
+  font-size: 13px;
+  background-color: #f9f9f9;
+  padding: 8px 12px;
+  border-radius: 6px;
+  word-break: break-all;
+  color: #444;
+}
+
+/* ============================= */
+/* 导航与模块切换                 */
+/* ============================= */
+.wallet-nav {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.wallet-nav button {
+  flex: 1;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.wallet-nav button.active {
+  background-color: #0078d7;
+  color: #fff;
+}
+
+.wallet-container section {
+  display: none;
+}
+
+.wallet-container section.active {
+  display: block;
+}
+
+/* ============================= */
+/* 响应式布局                     */
+/* ============================= */
+@media (max-width: 400px) {
+  .wallet-header h2 {
+    font-size: 18px;
+  }
+  .wallet-balance .value {
+    font-size: 20px;
+  }
+  .wallet-actions button {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+}
+
+/* ============================= */
+/* 暗色模式支持                   */
+/* ============================= */
+@media (prefers-color-scheme: dark) {
+  #wallet-ui {
+    color: #ddd;
+  }
+
+  .wallet-header h2 {
+    color: #eee;
+  }
+
+  .wallet-status {
+    color: #aaa;
+  }
+
+  .wallet-balance {
+    background-color: #2a2a2a;
+  }
+
+  .wallet-balance .value {
+    color: #66b0ff;
+  }
+
+  .wallet-card {
+    background-color: #2a2a2a;
+    color: #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  }
+
+  .wallet-address {
+    background-color: #333;
+    color: #ccc;
+  }
+
+  .wallet-nav button {
+    background-color: #444;
+    color: #ccc;
+  }
+
+  .wallet-nav button.active {
+    background-color: #66b0ff;
+    color: #fff;
+  }
+
+  .wallet-actions button {
+    background-color: #66b0ff;
+  }
+
+  .wallet-actions button:hover {
+    background-color: #3388cc;
+  }
+}

@@ -1,0 +1,237 @@
+/* ============================= */
+/* 全局样式                       */
+/* ============================= */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.wallet-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* ============================= */
+/* 导航栏样式                     */
+/* ============================= */
+.wallet-nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #0078d7;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.wallet-nav button {
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 6px 12px;
+  transition: background-color 0.2s ease;
+}
+
+.wallet-nav button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
+.wallet-nav button.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+/* ============================= */
+/* 卡片式布局 (各模块通用)         */
+/* ============================= */
+.wallet-ui, .asset-ui, .token-ui, .tx-ui, .settings-ui, .logs-ui {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.wallet-ui h2, .asset-ui h3, .token-ui h3, .tx-ui h3 {
+  margin-top: 0;
+  color: #222;
+}
+
+/* ============================= */
+/* Section 切换动画               */
+/* ============================= */
+.wallet-container section {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.wallet-container section.active {
+  display: block;
+  opacity: 1;
+}
+
+/* ============================= */
+/* 表格样式 (token-ui 专用)       */
+/* ============================= */
+.token-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.token-table th, .token-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.token-table th {
+  background-color: #f0f2f5;
+  font-weight: bold;
+}
+
+.token-row:hover {
+  background-color: #fafafa;
+}
+
+/* ============================= */
+/* 输入框样式                     */
+/* ============================= */
+input[type="text"], input[type="number"], select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+input:focus, select:focus {
+  border-color: #0078d7;
+  outline: none;
+}
+
+/* ============================= */
+/* 按钮样式                       */
+/* ============================= */
+button {
+  background-color: #0078d7;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* ============================= */
+/* 状态提示 (tx-ui 专用)          */
+/* ============================= */
+.swap-status {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* ============================= */
+/* 暗色模式支持                   */
+/* ============================= */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1e1e1e;
+    color: #ddd;
+  }
+
+  .wallet-ui, .asset-ui, .token-ui, .tx-ui, .settings-ui, .logs-ui {
+    background: #2a2a2a;
+    color: #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  }
+
+  .token-table th {
+    background-color: #333;
+    color: #ddd;
+  }
+
+  .token-row:hover {
+    background-color: #3a3a3a;
+  }
+
+  input[type="text"], input[type="number"], select {
+    background-color: #333;
+    color: #ddd;
+    border: 1px solid #555;
+  }
+
+  button {
+    background-color: #0078d7;
+  }
+
+  button:hover {
+    background-color: #005fa3;
+  }
+
+  .wallet-nav {
+    background-color: #005fa3;
+  }
+
+  .wallet-nav button.active {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* ============================= */
+/* 日志样式 (logs-ui.js 专用)     */
+/* ============================= */
+.logs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.logs-list li {
+  padding: 6px 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.log-normal {
+  color: #333;
+}
+
+.log-bridge {
+  color: #0078d7;
+  font-weight: bold;
+}
+
+.log-system {
+  color: #888;
+  font-style: italic;
+}
+
+/* ============================= */
+/* 响应式布局                     */
+/* ============================= */
+@media (max-width: 768px) {
+  .wallet-container {
+    grid-template-columns: 1fr;
+  }
+}

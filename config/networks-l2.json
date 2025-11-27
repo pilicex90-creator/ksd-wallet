@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Arbitrum One",
+    "chainId": 42161,
+    "rpc": "https://arb1.arbitrum.io/rpc",
+    "icon": "arb.png",
+    "enabled": true,
+    "type": "L2"
+  },
+  {
+    "name": "Arbitrum Nova",
+    "chainId": 42170,
+    "rpc": "https://nova.arbitrum.io/rpc",
+    "icon": "arb.png",
+    "enabled": true,
+    "type": "L2"
+  },
+  {
+    "name": "Optimism Mainnet",
+    "chainId": 10,
+    "rpc": "https://mainnet.optimism.io",
+    "icon": "op.png",
+    "enabled": true,
+    "type": "L2"
+  },
+  {
+    "name": "Polygon zkEVM",
+    "chainId": 1101,
+    "rpc": "https://zkevm-rpc.com",
+    "icon": "polygon.png",
+    "enabled": true,
+    "type": "L2"
+  },
+  {
+    "name": "Base Mainnet",
+    "chainId": 8453,
+    "rpc": "https://mainnet.base.org",
+    "icon": "base.png",
+    "enabled": true,
+    "type": "L2"
+  },
+  {
+    "name": "zkSync Era",
+    "chainId": 324,
+    "rpc": "https://mainnet.era.zksync.io",
+    "icon": "zksync.png",
+    "enabled": true,
+    "type": "L2"
+  },
+  {
+    "name": "Scroll Mainnet",
+    "chainId": 534352,
+    "rpc": "https://rpc.scroll.io",
+    "icon": "scroll.png",
+    "enabled": true,
+    "type": "L2"
+  },
+  {
+    "name": "Linea Mainnet",
+    "chainId": 59144,
+    "rpc": "https://rpc.linea.build",
+    "icon": "linea.png",
+    "enabled": true,
+    "type": "L2"
+  },
+  {
+    "name": "StarkNet Mainnet",
+    "chainId": "starknet-mainnet",
+    "rpc": "https://starknet-mainnet.infura.io/v3/YOUR_KEY",
+    "icon": "starknet.png",
+    "enabled": true,
+    "type": "L2"
+  }
+]
