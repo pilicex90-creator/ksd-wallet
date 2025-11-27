@@ -1,6 +1,6 @@
 {
   "name": "ksd-wallet",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "KSD Wallet browser extension，支持账户管理、交易签名、资产索引和网络交互",
   "author": "li",
   "license": "MIT",
