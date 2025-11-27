@@ -21,6 +21,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # Chrome 构建与上传
       - name: Build Chrome Extension
         run: npm run build:chrome
 
@@ -28,5 +29,27 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: ksd-wallet-chrome.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Edge 构建与上传
+      - name: Build Edge Extension
+        run: npm run build:edge
+
+      - name: Upload Edge zip to Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ksd-wallet-edge.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Firefox 构建与上传
+      - name: Build Firefox Extension
+        run: npm run build:firefox
+
+      - name: Upload Firefox zip to Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ksd-wallet-firefox.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
