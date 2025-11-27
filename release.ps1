@@ -45,7 +45,8 @@ try {
 }
 
 # Step 6: 构建三个 zip 包（一次性）
-node build.cjs   # 增强版 build.cjs 会一次性生成 chrome/edge/firefox zip
+# 使用 npx 调用 vite，保证本地和 CI 都能运行
+node build.cjs
 
 # Step 7: 校验 zip 包完整性
 npm run check:zip
